@@ -1,0 +1,126 @@
+/* Reboot */
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: "Roboto", "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #432ca8;
+    text-decoration: none;
+}
+
+ul, ol {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+button, input, textarea {
+    font: inherit;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+
+/* Fonts */
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/Raleway-Regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/Raleway-Bold.woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/Raleway-Black.woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* Variables */
+:root {
+  /* Базовые цвета */
+  --white: #FFFFFF;
+  --black: #000000;
+
+  --grey-1: #F8F8FA;
+  --grey-2: #CBCBCB;
+  --grey-3: #848484;
+
+  --red-1: #E6889B;
+  --red-2: #DB1313;
+
+  --green-1: #DBFCE7;
+  --green-2: #016630;
+
+  /* Семантические цвета */
+  --color-bg-primary: var(--grey-1);
+
+  --color-text-primary: var(--black);
+  --color-text-secondary: var(--grey-3);
+
+  --color-border: var(--grey-2);
+
+  --color-button-bg: var(--black);
+  --color-button-text: var(--white);
+
+  --color-danger: var(--red-2);
+  --color-danger-muted: var(--red-1);
+
+  --color-success-bg: var(--green-1);
+  --color-success-text: var(--green-2);
+
+  /* Шрифт */
+  --font-family-primary: "Raleway", sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  --font-size-xs: 1.2rem;
+  --font-size-sm: 1.4rem;
+  --font-size-md: 1.6rem;
+  --font-size-lg: 2rem;
+  --font-size-xl: 2.4rem;
+
+  /* Spacing (4px system) */
+  --space-1: 0.4rem;
+  --space-2: 0.8rem;
+  --space-3: 1.2rem;
+  --space-4: 1.6rem;
+  --space-5: 2rem;
+  --space-6: 2.4rem;
+  --space-8: 3.2rem;
+  --space-10: 4rem;
+  --space-12: 4.8rem;
+  --space-14: 5.6rem;
+  --space-16: 6.4rem;
+  --space-20: 8rem;
+
+  /* Border radius */
+  --radius-sm: 0.4rem;
+  --radius-md: 0.8rem;
+  --radius-lg: 1.2rem;
+  --radius-xl: 1.6rem;
+}
