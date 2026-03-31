@@ -10,8 +10,7 @@ body {
 }
 
 a {
-    color: #432ca8;
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul, ol {
@@ -25,7 +24,6 @@ h1, h2, h3, h4, p {
 }
 
 button, input, textarea {
-    font: inherit;
     border: none;
     background: none;
     outline: none;
@@ -57,6 +55,9 @@ button, input, textarea {
   font-display: swap;
 }
 
+:root {
+  font-size: 10px;
+}
 
 /* Variables */
 :root {
@@ -65,17 +66,20 @@ button, input, textarea {
   --black: #000000;
 
   --grey-1: #F8F8FA;
-  --grey-2: #CBCBCB;
+  --grey-2: #dcdcdc;
   --grey-3: #848484;
+  --grey-4: #1f2937;
 
   --red-1: #E6889B;
   --red-2: #DB1313;
+  --red-3: rgb(190, 21, 21);
 
   --green-1: #DBFCE7;
   --green-2: #016630;
 
   /* Семантические цвета */
   --color-bg-primary: var(--grey-1);
+  --color-bg-secondary: var(--white);
 
   --color-text-primary: var(--black);
   --color-text-secondary: var(--grey-3);
@@ -83,10 +87,12 @@ button, input, textarea {
   --color-border: var(--grey-2);
 
   --color-button-bg: var(--black);
+  --color-button-bg-hovered: var(--grey-4);
   --color-button-text: var(--white);
 
   --color-danger: var(--red-2);
   --color-danger-muted: var(--red-1);
+  --color-danger-hovered: var(--red-3);
 
   --color-success-bg: var(--green-1);
   --color-success-text: var(--green-2);
@@ -103,6 +109,7 @@ button, input, textarea {
   --font-size-md: 1.6rem;
   --font-size-lg: 2rem;
   --font-size-xl: 2.4rem;
+  --font-size-2xl: 2.8rem;
 
   /* Spacing (4px system) */
   --space-1: 0.4rem;
@@ -123,4 +130,57 @@ button, input, textarea {
   --radius-md: 0.8rem;
   --radius-lg: 1.2rem;
   --radius-xl: 1.6rem;
+}
+
+
+/* Утилитарные классы */
+body {
+  background-color: var(--color-bg-primary);
+}
+
+.container {
+  width: 1200px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.title-h1 {
+  font-size: var(--font-size-xl);
+}
+
+.title-h2 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.button {
+  font-size: var(--font-size-sm);
+
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button--primary {
+    background: var(--color-button-bg);
+    color: var(--color-button-text);
+}
+
+.button--primary:hover {
+    background: #1f2937;
+}
+
+.button--danger {
+    background: var(--color-danger);
+    color: #ffffff;
+}
+
+.button--danger:hover {
+    background: var(--color-danger-hovered);
 }

@@ -1,0 +1,39 @@
+.movie-row {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.movie-row:hover {
+    background-color: var(--color-bg-primary);
+}
+
+.movie-row__poster,
+.movie-row__poster-placeholder {
+    background-color: var(--color-border);
+    min-width: 80px;
+    min-height: 80px;
+    width: 80px;
+    height: 120px;
+    border-radius: var(--radius-md);
+}
+
+.movie-row__poster {
+    object-fit: contain;
+}
+
+.movie-row__title {
+    color: var(--color-text-primary);
+}
+
+.movie-row__secondary-info {
+    color: var(--color-text-secondary);
+}
+
+.movie-row__rating {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-1) var(--space-2);
+    background-color: var(--color-success-bg);
+    color: var(--color-success-text);
+    border-radius: var(--radius-md);
+}

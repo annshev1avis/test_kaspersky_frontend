@@ -1,0 +1,26 @@
+.movies__container {
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-10);
+}
+
+.movies__title-and-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-4);
+}
+
+.movies__buttons {
+    display: flex;
+    gap: var(--space-1);
+}
+
+.movies__search-and-sorting {
+    display: flex;
+    gap: var(--space-1);
+    margin-bottom: var(--space-4);
+}
+
+.movies__search {
+    flex-grow: 2;
+}
