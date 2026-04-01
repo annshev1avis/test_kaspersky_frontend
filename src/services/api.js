@@ -1,32 +1,40 @@
 const BASE_URL = 'http://localhost:3001';
 
 export async function getMovies() {
-    const response = await fetch(`${BASE_URL}/movies`);
+  const response = await fetch(`${BASE_URL}/movies`);
 
-    if (!response.ok) {
-        throw new Error('Не удалось загрузить список фильмов');
-    }
+  if (!response.ok) {
+    throw new Error('Не удалось загрузить список фильмов');
+  }
 
-    return response.json();
+  return response.json();
 }
 
+export async function getGenres() {
+  const response = await fetch(`${BASE_URL}/genres`);
+
+  if (!response.ok) {
+    throw new Error('Не удалось загрузить список жанров');
+  }
+
+  return response.json();
+}
 
 export async function createMovie(movieJson) {
-    const response = await fetch(`${BASE_URL}/movies`, {
-        method: "POST",
-        headers: {
-            "contentType": "application/json",
-        },
-        body: JSON.stringify(movieJson)
-    });
+  const response = await fetch(`${BASE_URL}/movies`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(movieJson),
+  });
 
-    if (!response.ok) {
-        throw new Error("Не удалось добавить фильм");
-    }
-    
-    return response.json;
+  if (!response.ok) {
+    throw new Error("Не удалось добавить фильм");
+  }
+
+  return response.json();
 }
-
 
 export async function deleteMovie(id) {
   const response = await fetch(`${BASE_URL}/movies/${id}`, {

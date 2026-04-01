@@ -9,7 +9,7 @@ export default function NavBar() {
         <ul className="navbar__links">
           <li><NavLink className="navbar__link" to="/">Приветствие</NavLink></li>
           <li><NavLink className="navbar__link" to="/list">Список фильмов</NavLink></li>
-          <li><NavLink className="navbar__link" to="/groups">Список групп</NavLink></li>
+          <li><NavLink className="navbar__link" to="/genres">Список жанров</NavLink></li>
         </ul>
       </div>
     </header>

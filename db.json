@@ -196,5 +196,37 @@
       "poster": ""
     }
   ],
+  "genres": [
+    {
+      "id": "1",
+      "name": "Драма",
+      "moviesCount": 5
+    },
+    {
+      "id": "2",
+      "name": "Научная фантастика",
+      "moviesCount": 3
+    },
+    {
+      "id": "3",
+      "name": "Боевик",
+      "moviesCount": 2
+    },
+    {
+      "id": "4",
+      "name": "Криминал",
+      "moviesCount": 1
+    },
+    {
+      "id": "5",
+      "name": "Фэнтези",
+      "moviesCount": 3
+    },
+    {
+      "id": "6",
+      "name": "Триллер",
+      "moviesCount": 1
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
