@@ -8,6 +8,19 @@ import AddMovieModal from "../../components/AddMovieModal/AddMovieModal";
 import "./Movies.css";
 
 
+const sortByOptions = [
+  { value: "title", label: "По названию" },
+  { value: "year", label: "По году" },
+  { value: "rating", label: "По рейтингу" },
+];
+
+
+const sortingOrderOptions = [
+  { value: "asc", label: "По возрастанию" },
+  { value: "desc", label: "По убыванию" },
+];
+
+
 export default function Movies() {
   const [movies, setMovies] = useState([]);
 
@@ -87,17 +100,6 @@ export default function Movies() {
     
   }, [movies, sortBy, sortingOrder, searchQuery]);
 
-  const sortByOptions = [
-    { value: "title", label: "По названию" },
-    { value: "year", label: "По году" },
-    { value: "rating", label: "По рейтингу" },
-  ];
-
-  const sortingOrderOptions = [
-    { value: "asc", label: "По возрастанию" },
-    { value: "desc", label: "По убыванию" },
-  ];
-
   if (isLoading) {
     return <div className="container movies__container">Загрузка...</div>;
   }
@@ -108,6 +110,7 @@ export default function Movies() {
 
   return (
     <div className="container movies__container">
+
       <div className="movies__title-and-buttons">
         <h2 className="title-h2">Список фильмов</h2>
         <div className="movies__buttons">
@@ -126,6 +129,7 @@ export default function Movies() {
           </button>
         </div>
       </div>
+
       <div className="movies__search-and-sorting">
         <SearchInput
           className="movies__search"
@@ -143,6 +147,7 @@ export default function Movies() {
           setValue={setSortingOrder}
         />
       </div>
+
       <MoviesTable
         movies={visibleMovies}
         selectedMovieIds={selectedMovieIds}
