@@ -83,6 +83,7 @@ button, input, textarea {
 
   --color-text-primary: var(--black);
   --color-text-secondary: var(--grey-3);
+  --color-placeholder: #a1a1aa;
 
   --color-border: var(--grey-2);
 
@@ -96,6 +97,8 @@ button, input, textarea {
 
   --color-success-bg: var(--green-1);
   --color-success-text: var(--green-2);
+
+  --color-overlay: rgba(15, 23, 42, 0.45);
 
   /* Шрифт */
   --font-family-primary: "Raleway", sans-serif;
@@ -130,6 +133,9 @@ button, input, textarea {
   --radius-md: 0.8rem;
   --radius-lg: 1.2rem;
   --radius-xl: 1.6rem;
+
+  /* Тени */
+  --shadow-modal: 0 20px 60px rgba(0, 0, 0, 0.18);
 }
 
 
@@ -155,8 +161,9 @@ body {
 
 .button {
   font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
 
-  padding: var(--space-2) var(--space-4);
+  padding: var(--space-3) var(--space-5);
   border-radius: var(--radius-md);
 
   display: inline-flex;
@@ -176,6 +183,15 @@ body {
     background: #1f2937;
 }
 
+.button--secondary {
+  background: var(--grey-1);
+  color: var(--color-text-primary);
+}
+
+.button--secondary:hover {
+  background: #ececf1;
+}
+
 .button--danger {
     background: var(--color-danger);
     color: #ffffff;
@@ -183,4 +199,14 @@ body {
 
 .button--danger:hover {
     background: var(--color-danger-hovered);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.button--danger:disabled {
+  background: var(--color-danger-muted);
+  color: var(--white);
 }

@@ -1,12 +1,16 @@
 import './MovieRow.css';
 
-export default function MovieRow({ movie }) {
-  const actorsText = movie.actors.join(', ');
+export default function MovieRow({ movie, isSelected, onToggleSelection }) {
+  const actorsText = movie.actors ? movie.actors.join(', ') : "";
 
   return (
     <tr className='movie-row'>
       <td>
-        <input type="checkbox"></input>
+        <input
+          type="checkbox"
+          checked={isSelected}
+          onChange={() => onToggleSelection(movie.id)}
+        />
       </td>
       <td>
         {

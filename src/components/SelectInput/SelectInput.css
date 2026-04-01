@@ -1,12 +1,13 @@
-.sort-select {
+.select-input {
     position: relative;
-    width: 140px;
+    width: fit-content
 }
 
-.sort-select__field {
+.select-input__field {
     width: 100%;
     height: 44px;
     padding: var(--space-3) var(--space-4);
+    padding-right: var(--space-8);
 
     border-radius: 10px;
     border: 1px solid var(--color-border);
@@ -21,7 +22,7 @@
 }
 
 /* стрелка */
-.sort-select::after {
+.select-input::after {
     content: "▾";
     position: absolute;
     right: 12px;
@@ -31,8 +32,7 @@
     color: #8d93a6;
 }
 
-.sort-select__field:focus {
+.select-input__field:focus {
     border: none;
     border-color: var(--color-text-secondary);
-    box-shadow: 0 0 0 2px rgba(65, 65, 65, 0.15);
 }

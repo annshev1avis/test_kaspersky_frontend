@@ -1,7 +1,11 @@
 import MovieRow from "../MovieRow/MovieRow";
 import './MoviesTable.css';
 
-export default function MoviesTable({ movies }) {
+export default function MoviesTable({
+  movies,
+  selectedMovieIds,
+  onToggleMovieSelection
+}) {
   return (
     <div className="movie-table-container">
       <table className="movie-table">
@@ -17,7 +21,14 @@ export default function MoviesTable({ movies }) {
           </tr>
         </thead>
         <tbody>
-          { movies.map((movie) => <MovieRow key={movie.id} movie={movie}/>) }
+          { movies.map((movie) => (
+            <MovieRow
+              key={movie.id}
+              movie={movie}
+              isSelected={selectedMovieIds.includes(movie.id)}
+              onToggleSelection={onToggleMovieSelection}
+            />
+          )) }
         </tbody>
       </table>
     </div>

@@ -4,7 +4,7 @@ import './NavBar.css';
 
 export default function NavBar() {
   return (
-    <header class="navbar">
+    <header className="navbar">
       <div className="container">
         <ul className="navbar__links">
           <li><NavLink className="navbar__link" to="/">Приветствие</NavLink></li>
